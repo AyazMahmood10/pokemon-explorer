@@ -1,0 +1,30 @@
+.gridContainer{
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.pokemonGrid{
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.pokemonImage {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.pokemonGrid h3 {
+    text-transform: capitalize;
+}
+
+.pendingText{
+    margin: 10px;
+    text-align: center; 
+}
