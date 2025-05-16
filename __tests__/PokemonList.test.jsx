@@ -1,6 +1,5 @@
-import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
-import { PokemonList } from '../components/PokemonList';
+import { PokemonList } from '../src/components/PokemonList';
 
 const mockData = [
   [{ name: 'bulbasaur' }, { name: 'charmander' }],
@@ -17,6 +16,7 @@ global.fetch = jest.fn(() => {
 });
 
 describe('PokemonList', () => {
+  let observeMock, unobserveMock, disconnectMock, triggerCallback;
   beforeEach(() => {
     fetchCallCount = 0;
     fetch.mockClear();
